@@ -66,7 +66,9 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.OnIte
 
     public void onItemClick(int position)
     {
-        startActivity(new Intent(MainActivity.this,MusicActivity.class).putExtra("songs",songs));
+        startActivity(new Intent(MainActivity.this,MusicActivity.class)
+                .putExtra("pos",position)
+                .putExtra("songs",songs));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
